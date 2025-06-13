@@ -15,7 +15,7 @@ async def root():
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
 
-@app.get("/omikuji3")
+@app.get("/omikuji")
 def omikuji():
     omikuji_list = [
         "大吉",
@@ -31,3 +31,26 @@ def omikuji():
     ]
 
     return {"result" : omikuji_list[random.randrange(10)]}
+
+
+
+
+##########第９回目課題
+
+    from fastapi.responses import HTMLResponse #インポート
+
+### コードいろいろ... ###
+
+@app.get("/9-1")
+def index():
+    html_content = """
+    <html>
+        <head>
+            <title>Some HTML in here</title>
+        </head>
+        <body>
+            <h1>Look me! HTML!</h1>
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content, status_code=200)
