@@ -41,7 +41,7 @@ def omikuji():
 
 ### コードいろいろ... ###
 
-@app.get("/9-1")
+@app.get("/index")
 def index():
     html_content = """
     <html>
@@ -49,8 +49,15 @@ def index():
             <title>Some HTML in here</title>
         </head>
         <body>
-            <h1>Look me! HTML!</h1>
+            <h1>Hi!</h1>
+            <h1>Render is very difficult fot me!</h1>
         </body>
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+
+#9-2
+    @app.post("/present")
+    async def give_present(present):
+    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
