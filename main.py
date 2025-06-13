@@ -50,7 +50,7 @@ def index():
         </head>
         <body>
             <h1>Hi!</h1>
-            <h1>Render is very difficult fot me!</h1>
+            <h1>Render is very difficult for me!</h1>
         </body>
     </html>
     """
