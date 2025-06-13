@@ -4,6 +4,8 @@ from fastapi import FastAPI
 
 import random  # randomライブラリを追加
 
+from fastapi.responses import HTMLResponse #インポート
+
 app = FastAPI()
 
 
@@ -36,8 +38,6 @@ def omikuji():
 
 
 ##########第９回目課題
-
-    from fastapi.responses import HTMLResponse #インポート
 
 ### コードいろいろ... ###
 
