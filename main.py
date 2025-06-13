@@ -62,6 +62,4 @@ def index():
 async def give_subject(subject):
     return {"response": f"サーバです。 {subject}の試験お疲れ様。結果は100点満点だよ！"}  # f文字列というPythonの機能を使っている
 
-@app.post("/subject")  # ここを変更
-async def give_subject(subject):
-    return {"response": f"サーバです。{subject}の試験お疲れ様。結果は100点満点だよ！"}
+
